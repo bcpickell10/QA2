@@ -9,23 +9,29 @@ def select_topic(database_file):
     cursor = conn.cursor()
     
     try:
-        # Retrieve the names of all tables (topics) in the database
-        cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
-        tables = cursor.fetchall()
-        
-        # Display the list of topics to the user
-        print("Available Topics:")
-        for idx, table in enumerate(tables, start=1):
-            print(f"{idx}. {table[0]}")
-        
-        # Prompt the user to select a topic
-        topic_idx = int(input("Enter the number of the topic you want to be quizzed on: "))
-        
-        # Get the selected topic name
-        selected_topic = tables[topic_idx - 1][0]
-        
-        # Start the quiz for the selected topic
-        start_quiz(selected_topic, cursor)
+        while True:
+            # Retrieve the names of all tables (topics) in the database
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
+            tables = cursor.fetchall()
+            
+            # Display the list of topics to the user
+            print("Available Topics:")
+            for idx, table in enumerate(tables, start=1):
+                print(f"{idx}. {table[0]}")
+            
+            # Prompt the user to select a topic
+            topic_idx = int(input("Enter the number of the topic you want to be quizzed on: "))
+            
+            # Get the selected topic name
+            selected_topic = tables[topic_idx - 1][0]
+            
+            # Start the quiz for the selected topic
+            start_quiz(selected_topic, cursor)
+            
+            # Ask the user if they want to choose another topic
+            choice = input("Do you want to choose another topic? (yes/no): ").lower()
+            if choice != "yes":
+                break
     
     except sqlite3.Error as e:
         print("Error:", e)
@@ -88,5 +94,6 @@ def start_quiz(topic, cursor):
 # Replace 'database_file_name.db' with the name of your SQL database file
 database_file = 'quarterly_assessment.db'
 select_topic(database_file)
+
 
 
