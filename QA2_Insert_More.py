@@ -10,11 +10,12 @@ def insert_values_into_tables(database_file):
     try:
         # Insert values
         
-        cursor.execute("INSERT INTO Analytical_Thinking (AT_Question, Answer) VALUES (?, ?)", ('True or False: Analytical thinking involves the ability to break down complex problems into parts.', 'True'))
-        cursor.execute("INSERT INTO Analytical_Thinking (AT_Question, Answer) VALUES (?, ?)", ('True or False: Analytical thinking is primarily focused on finding one correct solution to a problem.', 'False'))
-        cursor.execute("INSERT INTO Analytical_Thinking (AT_Question, Answer) VALUES (?, ?)", ('True or False: Data analysis is a crucial component of analytical thinking in business.', 'True'))
-        cursor.execute("INSERT INTO Analytical_Thinking (AT_Question, Answer) VALUES (?, ?)", ('True or False: Analytical thinking skills are not useful in decision-making processes.', 'False'))
-        cursor.execute("INSERT INTO Analytical_Thinking (AT_Question, Answer) VALUES (?, ?)", ('True or False: Critical thinking and analytical thinking are synonymous terms.', 'False'))
+        cursor.execute("INSERT INTO Apps_Development (AD_Question, Answer) VALUES (?, ?)", ('True or False: Python is an interpreted language, meaning the code is executed line by line.', 'True'))
+        cursor.execute("INSERT INTO Apps_Development (AD_Question, Answer) VALUES (?, ?)", ('Python uses curly braces ({}) to denote code blocks.', 'False'))
+        cursor.execute("INSERT INTO Apps_Development (AD_Question, Answer) VALUES (?, ?)", ('True or False: Python is not suitable for building web applications.', 'False'))
+        cursor.execute("INSERT INTO Apps_Development (AD_Question, Answer) VALUES (?, ?)", ('True or False: Python uses indentation to define code blocks, such as loops and functions.', 'True'))
+        cursor.execute("INSERT INTO Apps_Development (AD_Question, Answer) VALUES (?, ?)", ("True or False: Python's range() function generates a sequence of numbers from a starting value to an ending value.", 'True'))
+        
         
         
         # Commit the changes to the database
