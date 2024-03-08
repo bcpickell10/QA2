@@ -1,6 +1,11 @@
 import sqlite3
 import random
 
+# ANSI escape codes for colored text
+RED = '\033[91m'
+GREEN = '\033[92m'
+END = '\033[0m'
+
 def select_topic(database_file):
     # Connect to the SQLite database
     conn = sqlite3.connect(database_file)
@@ -77,10 +82,10 @@ def start_quiz(topic, cursor):
             
             # Check if the user's answer matches the correct answer
             if user_answer.lower() == answer.lower():
-                print("Correct!")
+                print(GREEN + "Correct!" + END)
                 score += 1
             else:
-                print(f"Wrong! The correct answer is: {answer}")
+                print(RED + f"Incorrect! The correct answer is: {answer}" + END)
         
         # Display quiz results
         print("\nQuiz Results:")
