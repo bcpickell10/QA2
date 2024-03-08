@@ -8,14 +8,13 @@ def insert_values_into_tables(database_file):
     cursor = conn.cursor()
     
     try:
-        # Insert values into Table 1
-        # Insert values into Table 2
-        cursor.execute("INSERT INTO Analytics (Analytics_Question, Answer) VALUES (?, ?)", ('True or False: A p-value measures the strength of evidence against a null hypothesis.', 'True'))
-        cursor.execute("INSERT INTO Analytics (Analytics_Question, Answer) VALUES (?, ?)", ('True or False: Outliers always need to be removed from datasets before analysis.', 'False'))
-        cursor.execute("INSERT INTO Analytics (Analytics_Question, Answer) VALUES (?, ?)", ('True or False: A histogram is used to represent categorical data.', 'False'))
-        cursor.execute("INSERT INTO Analytics (Analytics_Question, Answer) VALUES (?, ?)", ('True or False: Data mining focuses on discovering meaningful patterns and relationships in large datasets.', 'True'))
-        cursor.execute("INSERT INTO Analytics (Analytics_Question, Answer) VALUES (?, ?)", ('True or False: Normal distribution has a skewness of zero.', 'True'))
+        # Insert values
         
+        cursor.execute("INSERT INTO Business_Management (BMGT_Question, Answer) VALUES (?, ?)", ("True or False: In Maslow's hierarchy of needs, physiological needs are at the highest level.", 'True'))
+        cursor.execute("INSERT INTO Business_Management (BMGT_Question, Answer) VALUES (?, ?)", ('True or False: SWOT analysis stands for Strengths, Weaknesses, Opportunities, and Threats.', 'True'))
+        cursor.execute("INSERT INTO Business_Management (BMGT_Question, Answer) VALUES (?, ?)", ('True or False: According to the expectancy theory, employees are motivated when they believe their efforts will lead to desirable performance outcomes.', 'True'))
+        cursor.execute("INSERT INTO Business_Management (BMGT_Question, Answer) VALUES (?, ?)", ('True or False: Transformational leadership focuses solely on maintaining the status quo within an organization.', 'False'))
+        cursor.execute("INSERT INTO Business_Management (BMGT_Question, Answer) VALUES (?, ?)", ('True or False: The SMART acronym stands for Specific, Measurable, Achievable, Relevant, and Timely.', 'True'))
         
         
         # Commit the changes to the database
