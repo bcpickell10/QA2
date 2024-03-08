@@ -9,11 +9,12 @@ def insert_values_into_tables(database_file):
     
     try:
         # Insert values into Table 1
-        cursor.execute("INSERT INTO Finance (Finance_Question, Answer) VALUES (?, ?)", ('True or False: The Sharpe ratio measures the excess return per unit of standard deviation of an investment or a trading strategy.', 'True'))
-        cursor.execute("INSERT INTO Finance (Finance_Question, Answer) VALUES (?, ?)", ('True or False: A higher Sharpe ratio indicates better risk-adjusted performance.', ''))
-        cursor.execute("INSERT INTO Finance (Finance_Question, Answer) VALUES (?, ?)", ('True or False: The debt-to-equity ratio measures financial leverage by dividing its total liabilities by its shareholders equity.', 'True'))
-        cursor.execute("INSERT INTO Finance (Finance_Question, Answer) VALUES (?, ?)", ('True or False: Return on Equity (ROE) is calculated by dividing net income by total assets.', 'False'))
-        cursor.execute("INSERT INTO Finance (Finance_Question, Answer) VALUES (?, ?)", ('True or False: Gross Profit Margin is calculated by dividing gross profit by total revenue and multiplying by 100 to express it as a percentage.', 'True'))
+        # Insert values into Table 2
+        cursor.execute("INSERT INTO Analytics (Analytics_Question, Answer) VALUES (?, ?)", ('True or False: A p-value measures the strength of evidence against a null hypothesis.', 'True'))
+        cursor.execute("INSERT INTO Analytics (Analytics_Question, Answer) VALUES (?, ?)", ('True or False: Outliers always need to be removed from datasets before analysis.', 'False'))
+        cursor.execute("INSERT INTO Analytics (Analytics_Question, Answer) VALUES (?, ?)", ('True or False: A histogram is used to represent categorical data.', 'False'))
+        cursor.execute("INSERT INTO Analytics (Analytics_Question, Answer) VALUES (?, ?)", ('True or False: Data mining focuses on discovering meaningful patterns and relationships in large datasets.', 'True'))
+        cursor.execute("INSERT INTO Analytics (Analytics_Question, Answer) VALUES (?, ?)", ('True or False: Normal distribution has a skewness of zero.', 'True'))
         
         
         
