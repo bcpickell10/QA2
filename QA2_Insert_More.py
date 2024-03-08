@@ -10,11 +10,11 @@ def insert_values_into_tables(database_file):
     try:
         # Insert values
         
-        cursor.execute("INSERT INTO Business_Management (BMGT_Question, Answer) VALUES (?, ?)", ("True or False: In Maslow's hierarchy of needs, physiological needs are at the highest level.", 'True'))
-        cursor.execute("INSERT INTO Business_Management (BMGT_Question, Answer) VALUES (?, ?)", ('True or False: SWOT analysis stands for Strengths, Weaknesses, Opportunities, and Threats.', 'True'))
-        cursor.execute("INSERT INTO Business_Management (BMGT_Question, Answer) VALUES (?, ?)", ('True or False: According to the expectancy theory, employees are motivated when they believe their efforts will lead to desirable performance outcomes.', 'True'))
-        cursor.execute("INSERT INTO Business_Management (BMGT_Question, Answer) VALUES (?, ?)", ('True or False: Transformational leadership focuses solely on maintaining the status quo within an organization.', 'False'))
-        cursor.execute("INSERT INTO Business_Management (BMGT_Question, Answer) VALUES (?, ?)", ('True or False: The SMART acronym stands for Specific, Measurable, Achievable, Relevant, and Timely.', 'True'))
+        cursor.execute("INSERT INTO Analytical_Thinking (AT_Question, Answer) VALUES (?, ?)", ('True or False: Analytical thinking involves the ability to break down complex problems into parts.', 'True'))
+        cursor.execute("INSERT INTO Analytical_Thinking (AT_Question, Answer) VALUES (?, ?)", ('True or False: Analytical thinking is primarily focused on finding one correct solution to a problem.', 'False'))
+        cursor.execute("INSERT INTO Analytical_Thinking (AT_Question, Answer) VALUES (?, ?)", ('True or False: Data analysis is a crucial component of analytical thinking in business.', 'True'))
+        cursor.execute("INSERT INTO Analytical_Thinking (AT_Question, Answer) VALUES (?, ?)", ('True or False: Analytical thinking skills are not useful in decision-making processes.', 'False'))
+        cursor.execute("INSERT INTO Analytical_Thinking (AT_Question, Answer) VALUES (?, ?)", ('True or False: Critical thinking and analytical thinking are synonymous terms.', 'False'))
         
         
         # Commit the changes to the database
